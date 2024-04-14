@@ -16,7 +16,7 @@ def main():
     st.title("Malaria Infected Detector")
     st.write('The app will help the doctor with quick diagnosis of malaria infected patient')
     st.image('th.jpeg')
-    st.subheader('Please Upload the Image')
+    st.write("Introducing our malaria detector: a powerful tool for quick and accurate diagnosis. Users can upload images for instant assessment, guiding them to seek timely medical help. This improves hospital workflow, allowing doctors to focus on other diagnoses.")
     st.divider()
 
     # User Prompt
@@ -30,9 +30,9 @@ def main():
             predicted_class = prediction > 0.5
      
             if predicted_class > 0.5:
-                st.success('The patient is malaria uninfected')
+                st.success('The patient is not infected')
             else:
-                st.success('The patient is malaria infected')
+                st.error('The patient is infected')
     else:
         st.warning('Please upload an image first.')
 
